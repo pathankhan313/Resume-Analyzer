@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f5f7fc">
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="w">
+        <header class="masthead">
+            <div class="brand"><span class="brand-mark" aria-hidden="true">✦</span> Career toolkit</div>
+            <div class="theme-control"><label for="theme">Appearance</label><select id="theme" aria-label="Choose a color theme">
+                <option value="light">Light</option><option value="dark">Dark</option><option value="midnight">Midnight</option><option value="plum">Plum</option>
+                <option value="forest">Forest</option><option value="ember">Ember</option><option value="ocean">Ocean</option><option value="rose">Rose</option>
+            </select></div>
+        </header>
+        <section class="intro">
+            <div class="eyebrow">✦ Smart career insights</div>
+            <h1>Make your next move<br>with confidence.</h1>
+            <p class="sub">See how your resume lines up with the role you want. Get a clear score, spot skill gaps, and find practical ways to stand out.</p>
+        </section>
+        <div class="g">
+            <div class="c">
+                <h2><span class="step">01</span> Your resume</h2>
+                <div class="drop" id="drop">Choose a PDF or drop it here<input type="file" id="f" accept="application/pdf" hidden></div>
+                <div id="st">Or paste your resume text below.</div>
+                <textarea id="resume" placeholder="Extracted resume text appears here (you can edit it)"></textarea>
+            </div>
+            <div class="c">
+                <h2><span class="step">02</span> Target job <span class="mu" style="font-weight:400;font-size:13px">Optional</span></h2>
+                <textarea id="jd" placeholder="Paste the job description here…"></textarea>
+            </div>
+        </div>
+        <div class="actions"><button id="go">Analyze my resume</button></div>
+        <div id="res"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
